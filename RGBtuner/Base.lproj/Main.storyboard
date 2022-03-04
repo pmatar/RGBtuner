@@ -35,12 +35,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s6z-zp-AKn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6z-zp-AKn">
                                                 <rect key="frame" x="72.333333333333329" y="0.0" width="45" height="29.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="s6z-zp-AKn" secondAttribute="height" multiplier="23:15" id="HcM-eo-quJ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -49,6 +49,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="X4Y-3A-PZ1" secondAttribute="height" multiplier="37:4" id="BaP-Ps-v8J"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yRb-Ju-lCM"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -64,12 +67,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-gW-dTq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-gW-dTq">
                                                 <rect key="frame" x="72.333333333333329" y="0.0" width="45" height="29.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gPE-gW-dTq" secondAttribute="height" multiplier="23:15" id="sRc-e8-g4T"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -78,6 +81,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZfF-cz-RT1" secondAttribute="height" multiplier="37:4" id="UXV-vr-ak6"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="6ev-EV-92K"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -93,12 +99,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N8d-cy-VEz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8d-cy-VEz">
                                                 <rect key="frame" x="72.333333333333329" y="0.0" width="45" height="29.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="N8d-cy-VEz" secondAttribute="height" multiplier="23:15" id="ds9-Ih-pwj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -107,6 +113,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="W6X-wQ-F9O" secondAttribute="height" multiplier="37:4" id="aUC-Nd-8wT"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="rVY-lN-e7H"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -114,7 +123,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="CvH-J0-brd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2BA-Cx-fpL"/>
                             <constraint firstItem="x7M-us-O9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2bW-gX-Q3k"/>
@@ -125,6 +134,15 @@
                             <constraint firstItem="x7M-us-O9W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="iZD-9z-mRr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="W6X-wQ-F9O" id="iZB-BI-OL0"/>
+                        <outlet property="blueValueLabel" destination="N8d-cy-VEz" id="eqR-mx-nj9"/>
+                        <outlet property="colorView" destination="x7M-us-O9W" id="gW2-Y9-D3M"/>
+                        <outlet property="greenSlider" destination="ZfF-cz-RT1" id="7Xy-WV-bLG"/>
+                        <outlet property="greenValueLabel" destination="gPE-gW-dTq" id="MSg-Ix-8B7"/>
+                        <outlet property="redSlider" destination="X4Y-3A-PZ1" id="U3s-DV-Fun"/>
+                        <outlet property="redValueLabel" destination="s6z-zp-AKn" id="DH9-6o-IoN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,8 +153,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
