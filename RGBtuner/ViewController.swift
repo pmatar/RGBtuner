@@ -28,8 +28,6 @@ class ViewController: UIViewController {
         colorView.layer.cornerRadius = 10
     }
     
-
-    
     @IBAction func redSliderAction() {
         redValueLabel.text = String(format: "%.2f", redSlider.value)
         setupColorView()
