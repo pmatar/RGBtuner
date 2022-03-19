@@ -69,14 +69,6 @@ class TuningViewController: UIViewController {
 // MARK: - Private methods
 
 extension TuningViewController {
-    private func updateColorModel(color: inout UIColor) {
-        color = UIColor(red: CGFloat(redSlider.value),
-                        green: CGFloat(greenSlider.value),
-                        blue: CGFloat(blueSlider.value),
-                        alpha: 1.0)
-        colorView.backgroundColor = color
-    }
-    
     private func setupSliders() {
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -119,6 +111,28 @@ extension TuningViewController {
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
+    
+    private func updateColorModel(color: inout UIColor) {
+        color = UIColor(red: CGFloat(redSlider.value),
+                        green: CGFloat(greenSlider.value),
+                        blue: CGFloat(blueSlider.value),
+                        alpha: 1.0)
+        colorView.backgroundColor = color
+    }
+  
+    private func showAlert(title: String,
+                           message: String,
+                           textField: UITextField?) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            self.setValue(for: textField ?? self.redValueTF) // Чтобы не использовать force-unwrap
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 // MARK: - UITextFieldDelegate
 
@@ -131,6 +145,12 @@ extension TuningViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
         guard let numberValue = Float(newValue) else { return }
+        guard numberValue <= 1.0 else {
+            showAlert(title: "Wrong value!",
+                      message: "Please enter a number from 0 to 1",
+                      textField: textField)
+            return
+        }
         
         switch textField {
         case redValueTF:
