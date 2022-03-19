@@ -155,8 +155,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-FS-Ou1">
-                                <rect key="frame" x="129.5" y="377" width="61" height="42"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <rect key="frame" x="123.5" y="421" width="73" height="47"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,11 +170,11 @@
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="x7M-us-O9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2bW-gX-Q3k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xa1-FS-Ou1" secondAttribute="bottom" constant="100" id="6q8-1T-pMS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x7M-us-O9W" secondAttribute="trailing" constant="16" id="FmH-5K-n2p"/>
                             <constraint firstItem="xa1-FS-Ou1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KF1-Vy-0Iz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CuC-fR-xVm" secondAttribute="trailing" constant="16" id="T86-I3-Q6w"/>
                             <constraint firstItem="CuC-fR-xVm" firstAttribute="top" secondItem="x7M-us-O9W" secondAttribute="bottom" constant="15" id="d10-iT-yaH"/>
-                            <constraint firstItem="xa1-FS-Ou1" firstAttribute="top" secondItem="CuC-fR-xVm" secondAttribute="bottom" constant="110" id="g5S-IV-mBd"/>
                             <constraint firstItem="x7M-us-O9W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="iZD-9z-mRr"/>
                             <constraint firstItem="CuC-fR-xVm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wEd-Fk-TVP"/>
                             <constraint firstItem="x7M-us-O9W" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.18" id="xOQ-Gw-ndp"/>
@@ -200,9 +200,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem style="done" systemItem="done" id="eD3-ZF-6GH">
+                        <barButtonItem style="done" systemItem="flexibleSpace" id="eD3-ZF-6GH"/>
+                        <barButtonItem style="done" systemItem="done" id="YbN-Sx-OPS">
                             <connections>
-                                <action selector="didClick:" destination="BYZ-38-t0r" id="luK-FD-aBi"/>
+                                <action selector="didClick:" destination="BYZ-38-t0r" id="7q1-oO-CaG"/>
                             </connections>
                         </barButtonItem>
                     </items>

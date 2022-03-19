@@ -33,8 +33,9 @@ class TuningViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         colorView.backgroundColor = color
-        setupSliders()
         
+        setupSliders()
+        setValue(for: redValueTF, greenValueTF, blueValueTF)
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
     }
 
@@ -43,14 +44,14 @@ class TuningViewController: UIViewController {
 
         switch sender {
         case redSlider:
-            redValueLabel.text = string(from: redSlider)
-            redValueTF.text = string(from: redSlider)
+            setValue(for: redValueTF)
+            setValue(for: redValueLabel)
         case greenSlider:
-            greenValueLabel.text = string(from: greenSlider)
-            greenValueTF.text = string(from: greenSlider)
+            setValue(for: greenValueTF)
+            setValue(for: greenValueLabel)
         default:
-            blueValueLabel.text = string(from: blueSlider)
-            blueValueTF.text = string(from: blueSlider)
+            setValue(for: blueValueTF)
+            setValue(for: blueValueLabel)
         }
     }
         
@@ -62,7 +63,7 @@ class TuningViewController: UIViewController {
     @IBAction func didClick(_ sender: UIBarButtonItem) {
         view.endEditing(true)
     }
-    
+
 }
 
 // MARK: - Private methods
@@ -81,13 +82,25 @@ extension TuningViewController {
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var alpha: CGFloat = 1.0
+        
         color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
         redSlider.value = Float(red)
         greenSlider.value = Float(green)
         blueSlider.value = Float(blue)
-        redValueTF.text = string(from: redSlider)
-        greenValueTF.text = string(from: greenSlider)
-        blueValueTF.text = string(from: blueSlider)
+    }
+    
+    private func setValue(for textFields: UITextField...) {
+        textFields.forEach { textField in
+            switch textField {
+            case redValueTF:
+                redValueTF.text = string(from: redSlider)
+            case greenValueTF:
+                greenValueTF.text = string(from: greenSlider)
+            default:
+                blueValueTF.text = string(from: blueSlider)
+            }
+        }
     }
     
     private func setValue(for labels: UILabel...) {
@@ -120,10 +133,14 @@ extension TuningViewController: UITextFieldDelegate {
         guard let numberValue = Float(newValue) else { return }
         
         switch textField {
-        case redValueTF: redSlider.value = numberValue
-        case greenValueTF: greenSlider.value = numberValue
-        default: blueSlider.value = numberValue
+        case redValueTF:
+            redSlider.value = numberValue
+        case greenValueTF:
+            greenSlider.value = numberValue
+        default:
+            blueSlider.value = numberValue
         }
+        
         updateColorModel(color: &color)
         setValue(for: redValueLabel, greenValueLabel, blueValueLabel)
     }
